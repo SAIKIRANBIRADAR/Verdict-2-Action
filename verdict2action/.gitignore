@@ -29,3 +29,23 @@ npm-debug.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# Python
+backend/venv/
+backend/__pycache__/
+backend/*.pyc
+backend/.env
+backend/uploads/*
+backend/generated/*
+backend/verdict2action.db
+
+# Node
+verdict2action/node_modules/
+verdict2action/.next/
+verdict2action/.env.local
+verdict2action/dist/
+
+# OS
+.DS_Store
+Thumbs.db
+
