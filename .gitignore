@@ -1,4 +1,27 @@
-/Guidelines.txt
-/Justice Lady.png
-/Supreme Court.jpeg
-/Verdict2Action Logo.png
+# Python
+backend/venv/
+backend/__pycache__/
+backend/*.pyc
+backend/.env
+backend/uploads/*
+backend/generated/*
+backend/verdict2action.db
+backend/logs/*
+
+# Node
+verdict2action/node_modules/
+verdict2action/.next/
+verdict2action/.env.local
+verdict2action/dist/
+
+# IDE & OS
+.vscode/
+.DS_Store
+Thumbs.db
+
+# Large Assets (Optional, but usually better in a CDN)
+# जस्टिस लेडी और सुप्रीम कोर्ट वाली इमेजेस को इग्नोर करना है तो यहाँ रखें
+Justice Lady.png
+Supreme Court.jpeg
+Verdict2Action Logo.png
+Guidelines.txt
