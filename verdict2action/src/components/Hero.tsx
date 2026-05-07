@@ -48,7 +48,7 @@ export default function Hero() {
             className="text-4xl sm:text-5xl lg:text-6xl font-serif font-bold leading-tight mb-6"
           >
             From Legal Text to{" "}
-            <span className="bg-gradient-to-r from-accent to-[#F5D76E] bg-clip-text text-transparent">
+            <span className="text-accent font-extrabold">
               Action Plans
             </span>
           </motion.h1>
