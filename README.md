@@ -274,6 +274,7 @@ Users choose:
 
 Highlighted PDF
 Executive Brief
+
  4. Translation
 
 Optional translated brief generation.
