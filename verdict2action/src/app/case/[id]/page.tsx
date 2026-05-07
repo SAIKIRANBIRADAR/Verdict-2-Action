@@ -86,17 +86,17 @@ export default function CaseDetailPage() {
 
   const riskLevel = caseData.action_plan?.risk_score || caseData.priority || "Medium";
 
-  const riskColor = {
+  const riskColor = ({
     High: "text-critical",
     Medium: "text-important",
     Low: "text-green-400",
-  }[riskLevel as string] || "text-important";
+  } as any)[riskLevel] || "text-important";
 
-  const riskBg = {
+  const riskBg = ({
     High: "bg-critical/20 border-critical/30",
     Medium: "bg-important/20 border-important/30",
     Low: "bg-green-600/20 border-green-600/30",
-  }[riskLevel as string] || "bg-important/20 border-important/30";
+  } as any)[riskLevel] || "bg-important/20 border-important/30";
 
   return (
     <div className="min-h-screen pb-12">
@@ -204,11 +204,11 @@ export default function CaseDetailPage() {
             </h3>
             <div className="bg-black/20 rounded-lg p-4 max-h-[340px] overflow-y-auto space-y-3 text-sm leading-relaxed">
               {(caseData.extracted_data?.highlights || []).map((seg: any, i: number) => {
-                const bg = {
+                const bg = ({
                   high: "bg-critical/20 border-l-2 border-critical pl-3",
                   medium: "bg-important/20 border-l-2 border-important pl-3",
                   low: "bg-yellow-500/15 border-l-2 border-yellow-500 pl-3",
-                }[seg.severity?.toLowerCase() || "low"] || "";
+                } as any)[seg.severity?.toLowerCase() || "low"] || "";
                 return (
                   <p key={i} className={clsx("py-1.5 rounded text-white/80", bg)}>
                     {seg.text}

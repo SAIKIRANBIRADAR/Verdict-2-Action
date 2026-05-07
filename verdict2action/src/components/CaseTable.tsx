@@ -57,11 +57,11 @@ export default function CaseTable() {
   };
 
   const statusBadge = (status: string) => {
-    const styles = {
+    const styles = ({
       Pending: "bg-yellow-600/80",
       "In Progress": "bg-blue-600/80",
       Completed: "bg-green-600/80",
-    }[status] ?? "bg-white/20";
+    } as any)[status] ?? "bg-white/20";
     return (
       <span className={`${styles} text-white text-xs px-3 py-1 rounded-full font-medium`}>
         {status}
@@ -70,11 +70,11 @@ export default function CaseTable() {
   };
 
   const priorityBadge = (priority: string) => {
-    const color = {
+    const color = ({
       High: "text-critical",
       Medium: "text-important",
       Low: "text-green-400",
-    }[priority] ?? "text-white/60";
+    } as any)[priority] ?? "text-white/60";
     return <span className={`${color} font-medium text-sm`}>{priority}</span>;
   };
 

@@ -69,3 +69,15 @@
 2026-05-07 17:09:56 | INFO     | app.services.ai_service:generate_action_plan:165 | Using mock action plan (no AI key configured)
 2026-05-07 19:17:48 | INFO     | app.main:startup:58 | Starting Verdict2Action backend...
 2026-05-07 19:17:48 | INFO     | app.main:startup:61 | Database initialized. Server ready.
+2026-05-07 22:25:21 | INFO     | app.api.upload:upload_pdf:42 | PDF uploaded: Case 2.pdf → case f03a7806-9c37-4fde-8c12-0a825fd43d21
+2026-05-07 22:25:23 | INFO     | app.services.pdf_service:extract_text:66 | Detected digital PDF: ./uploads\dd29d1035bf04103af7b1eb0bf92b5a5.pdf
+2026-05-07 22:25:57 | INFO     | app.services.ai_service:extract_legal_data:143 | Using mock extraction (no AI key configured)
+2026-05-07 22:25:58 | INFO     | app.services.ai_service:generate_action_plan:165 | Using mock action plan (no AI key configured)
+2026-05-07 22:27:00 | INFO     | app.api.upload:upload_pdf:42 | PDF uploaded: Case 2.pdf → case 3367a7cd-e0df-48da-9837-eddb23c1590d
+2026-05-07 22:27:01 | INFO     | app.services.pdf_service:extract_text:66 | Detected digital PDF: ./uploads\6b191a019c1047b48ad6d826de8f82c6.pdf
+2026-05-07 22:27:22 | INFO     | app.services.ai_service:extract_legal_data:143 | Using mock extraction (no AI key configured)
+2026-05-07 22:27:23 | INFO     | app.services.ai_service:generate_action_plan:165 | Using mock action plan (no AI key configured)
+2026-05-07 22:30:00 | INFO     | app.api.upload:upload_pdf:42 | PDF uploaded: Case 2.pdf → case e3e53f14-c94a-4e0b-8424-3226852e3870
+2026-05-07 22:30:00 | INFO     | app.services.pdf_service:extract_text:66 | Detected digital PDF: ./uploads\d25c835ef0db47fab0c4e83ac6de739e.pdf
+2026-05-07 22:30:14 | INFO     | app.services.ai_service:extract_legal_data:143 | Using mock extraction (no AI key configured)
+2026-05-07 22:30:14 | INFO     | app.services.ai_service:generate_action_plan:165 | Using mock action plan (no AI key configured)
