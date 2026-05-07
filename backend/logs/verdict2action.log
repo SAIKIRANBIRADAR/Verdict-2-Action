@@ -67,3 +67,5 @@
 2026-05-07 17:09:47 | INFO     | app.services.pdf_service:extract_text:66 | Detected digital PDF: ./uploads\453b9ebeb20f426194f8c1ceb6a236ad.pdf
 2026-05-07 17:09:55 | INFO     | app.services.ai_service:extract_legal_data:143 | Using mock extraction (no AI key configured)
 2026-05-07 17:09:56 | INFO     | app.services.ai_service:generate_action_plan:165 | Using mock action plan (no AI key configured)
+2026-05-07 19:17:48 | INFO     | app.main:startup:58 | Starting Verdict2Action backend...
+2026-05-07 19:17:48 | INFO     | app.main:startup:61 | Database initialized. Server ready.
