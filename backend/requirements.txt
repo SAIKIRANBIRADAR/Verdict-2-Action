@@ -1,0 +1,47 @@
+# Core
+fastapi==0.115.6
+uvicorn[standard]==0.34.0
+python-multipart==0.0.20
+
+# Database
+sqlalchemy==2.0.36
+psycopg2-binary==2.9.10
+alembic==1.14.1
+
+# Validation
+pydantic==2.10.4
+pydantic-settings==2.7.1
+
+# Auth
+python-jose[cryptography]==3.3.0
+passlib[bcrypt]==1.7.4
+bcrypt==4.2.1
+
+# PDF Processing
+pdfplumber==0.11.4
+PyMuPDF==1.25.3
+
+# OCR
+paddleocr==2.9.1
+paddlepaddle==3.0.0b1
+pytesseract==0.3.13
+
+# AI
+openai==1.58.1
+google-generativeai==0.8.4
+
+# Task Queue
+celery[redis]==5.4.0
+redis==5.2.1
+
+# PDF Generation
+reportlab==4.2.5
+
+# Translation fallback
+googletrans==4.0.0rc1
+httpx==0.28.1
+
+# Utilities
+python-dotenv==1.0.1
+aiofiles==24.1.0
+loguru==0.7.3
