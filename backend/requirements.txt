@@ -1,45 +1,41 @@
 # Core
-fastapi==0.115.6
-uvicorn[standard]==0.34.0
-python-multipart==0.0.20
+fastapi
+uvicorn[standard]
+python-multipart
 
 # Database
-sqlalchemy==2.0.36
-psycopg2-binary==2.9.10
-alembic==1.14.1
+sqlalchemy
+psycopg2-binary
+alembic
 
 # Validation
-pydantic==2.8.2
-pydantic-settings==2.4.0
+pydantic
+pydantic-settings
 
 # Auth
-python-jose[cryptography]==3.3.0
-passlib[bcrypt]==1.7.4
-bcrypt==4.2.1
+python-jose[cryptography]
+passlib[bcrypt]
+bcrypt
 
 # PDF Processing
-pdfplumber==0.11.4
-PyMuPDF==1.25.3
+pdfplumber
+PyMuPDF
 
 # OCR
-pytesseract==0.3.13
+pytesseract
 
 # AI
-openai==1.58.1
-google-generativeai==0.8.4
+openai
+google-generativeai
 
 # Task Queue
-celery[redis]==5.4.0
-redis==5.2.1
+# Using background tasks now, but keeping for compatibility
+redis
 
 # PDF Generation
-reportlab==4.2.5
-
-# Translation fallback
-googletrans==4.0.0rc1
-httpx==0.28.1
+reportlab
 
 # Utilities
-python-dotenv==1.0.1
-aiofiles==24.1.0
-loguru==0.7.3
+python-dotenv
+aiofiles
+loguru
