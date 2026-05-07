@@ -262,6 +262,19 @@ export default function CaseDetailPage() {
                   <p className="text-xs text-white/40 mb-1">Reasoning</p>
                   <p className="text-sm text-white/70 leading-relaxed">{caseData.action_plan.reasoning || "No reasoning provided."}</p>
                 </div>
+                {caseData.action_plan.compliance_steps && caseData.action_plan.compliance_steps.length > 0 && (
+                  <div className="mb-6">
+                    <p className="text-xs text-white/40 mb-3 uppercase tracking-wider">Compliance Steps</p>
+                    <div className="space-y-2">
+                      {caseData.action_plan.compliance_steps.map((step: string, idx: number) => (
+                        <div key={idx} className="flex gap-3 text-sm text-white/80">
+                          <span className="text-accent shrink-0">{idx + 1}.</span>
+                          <p>{step}</p>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+                )}
                 {caseData.verification_status !== "approved" && (
                   <div className="flex gap-3">
                     <button onClick={() => handleVerify("approve")} className="flex-1 flex items-center justify-center gap-1.5 px-4 py-2.5 bg-green-600/80 rounded-lg text-sm font-medium hover:bg-green-600 transition-colors">
