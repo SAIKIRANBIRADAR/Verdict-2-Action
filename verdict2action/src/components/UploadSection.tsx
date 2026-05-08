@@ -73,10 +73,10 @@ export default function UploadSection({ onProcessingComplete }: UploadSectionPro
             console.error("Polling error", e);
           }
 
-          if (attempts > 60) { // 2 minutes timeout (60 * 2000ms)
+          if (attempts > 150) { // 5 minutes timeout (150 * 2000ms)
             clearInterval(interval);
             setIsProcessing(false);
-            setError("Processing timed out.");
+            setError("Processing is taking longer than usual. Please check your dashboard in a few minutes.");
           }
         }, 2000);
 
