@@ -1,4 +1,5 @@
-const API_BASE = process.env.NEXT_PUBLIC_API_URL || 'http://localhost:8001';
+const rawApiUrl = process.env.NEXT_PUBLIC_API_URL || 'http://localhost:8001';
+const API_BASE = rawApiUrl.endsWith('/') ? rawApiUrl.slice(0, -1) : rawApiUrl;
 
 // Helper to get auth headers
 const getHeaders = (isFormData = false) => {
