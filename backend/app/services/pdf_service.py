@@ -9,25 +9,25 @@ def extract_text_digital(pdf_path: str) -> str:
     """Extract text from a digitally-created PDF using pdfplumber + PyMuPDF fallback."""
     text = ""
 
-    # Primary: pdfplumber (best for structured/tabular content)
+    # Primary: PyMuPDF (Lightning fast)
     try:
-        with pdfplumber.open(pdf_path) as pdf:
-            for page in pdf.pages:
-                page_text = page.extract_text()
-                if page_text:
-                    text += page_text + "\n\n"
+        doc = fitz.open(pdf_path)
+        for page in doc:
+            text += page.get_text() + "\n\n"
+        doc.close()
     except Exception as e:
-        logger.warning(f"pdfplumber failed: {e}. Falling back to PyMuPDF.")
+        logger.warning(f"PyMuPDF failed: {e}. Falling back to pdfplumber.")
 
-    # Fallback: PyMuPDF (better for some layouts)
+    # Fallback: pdfplumber (Slower, but good for some layouts)
     if not text.strip():
         try:
-            doc = fitz.open(pdf_path)
-            for page in doc:
-                text += page.get_text() + "\n\n"
-            doc.close()
+            with pdfplumber.open(pdf_path) as pdf:
+                for page in pdf.pages:
+                    page_text = page.extract_text()
+                    if page_text:
+                        text += page_text + "\n\n"
         except Exception as e:
-            logger.error(f"PyMuPDF extraction also failed: {e}")
+            logger.error(f"pdfplumber extraction also failed: {e}")
 
     return text.strip()
 
